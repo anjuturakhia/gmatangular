@@ -1,0 +1,24 @@
+.my-class1{
+  border:1px solid red;
+  width: 38%;
+}
+
+.my-class2{
+  border:1px solid black;
+  width: 38%;
+}
+
+.error{
+  color: red;
+}
+
+.vl {
+  border-left: 2px solid #bfbfbf;
+  height: 250px;
+}
+
+
+.clearFix {
+	clear:both;
+}
+

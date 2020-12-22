@@ -1,0 +1,48 @@
+<div style="margin-left: 5%;">
+    <h3>
+        Quant Score <br> Q{{_actcurrentquantgraph}}
+    </h3>
+</div>
+
+<div class="">
+    <div style="margin-bottom: -25px;"  [style.margin-left.px]='_currentquantgraph'>{{_actcurrentquantgraph}}</div>
+ 
+    <div  [style.margin-left.px]='_targetquantgraph'>{{_acttargetquantgraph}}</div>
+</div>
+
+<div class="">
+    <div class="arrow-down" [style.margin-left.px]='_currentquantgraph'></div>
+ 
+    <div class="arrow-down2" [style.margin-left.px]='_targetquantgraph'></div>
+</div>
+
+<div *ngIf="differenceflag;else other_content">
+    <div class="total" [style.width.px]="300">
+        <div class="target" [style.width.px]='_targetquantgraph'><span style="font-size: 10px; color: rgb(95, 92, 92);"> +{{difference}}</span>
+          <div class="current" [style.width.px]="_currentquantgraph">
+          </div>
+        </div>
+    </div>
+</div>
+
+<ng-template #other_content>
+    <div class="total" [style.width.px]="300">
+        <div class="target" [style.width.px]='_targetquantgraph'>
+          <div class="current" [style.width.px]="_currentquantgraph">
+          </div>
+        </div>
+    </div>
+</ng-template>
+
+
+
+
+<br>
+<br>
+<br>
+<div >
+    <p>
+        Your Estimated quantitative score per your performance in this mock  test is Q{{_actcurrentquantgraph}}, which is {{difference}} points {{value}} your target quantitative score of Q{{_acttargetquantgraph}}
+    </p>
+</div>
+   
